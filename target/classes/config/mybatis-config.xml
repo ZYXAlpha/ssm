@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+
+<configuration>
+    <!--<properties resource=""></properties>-->
+    <!--设置别名，实体类所在的包名-->
+    <typeAliases>
+        <package name="com.zyx.bean"/>
+    </typeAliases>
+    <!--<environments default="development">
+        <environment id="development">
+            <transactionManager type="JDBC"></transactionManager>
+            <dataSource type="POOLED">
+                <property name="driver" value="${database.driver}"/>
+                <property name="url" value="${database.url}"/>
+                <property name="username" value="${database.username}"/>
+                <property name="password" value="${database.password}"/>
+            </dataSource>
+        </environment>
+    </environments>-->
+
+    <!--sql mapper文件的位置  <mapper resource=""></mapper>
+        或者使用<package name=""/>
+        使用package的要求：
+            1.mapper文件的名称和dao接口的名称必须完全一样，包括大小写
+            2.mapper文件和dao接口文件必须在同一目录-->
+    <mappers>
+        <package name="com.zyx.dao"/>
+    </mappers>
+
+</configuration>
